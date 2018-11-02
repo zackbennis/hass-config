@@ -5,11 +5,11 @@ homeassistant:
   latitude: 0
   longitude: 0
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 500
+  elevation: 0
   # metric for Metric, imperial for Imperial
-  unit_system: imperial
+  unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/New_York
+  time_zone: UTC
   # Customization file
   customize: !include customize.yaml
 
@@ -39,7 +39,7 @@ updater:
 discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-#conversation:
+conversation:
 
 # Enables support for tracking state changes over time
 history:
@@ -56,11 +56,11 @@ sun:
 # Sensors
 sensor:
   # Weather prediction
-  #- platform: yr
+  - platform: yr
 
 # Text to speech
-#tts:
-  #- platform: google
+tts:
+  - platform: google
 
 # Cloud
 cloud:
@@ -68,4 +68,3 @@ cloud:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-secrets: !include secrets.yaml
