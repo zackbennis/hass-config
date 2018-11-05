@@ -65,4 +65,3 @@ cloud:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-secrets: !include secrets.yaml
