@@ -3,7 +3,8 @@ secrets: !include secrets.yaml
 automation dnsupdate:
   trigger:
     platform: time
-    at: '00:00:00'
+    #at: '00:00:00'
+    seconds: 30
   action:
     shell_command.ddns_renew
     
