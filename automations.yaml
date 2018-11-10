@@ -9,4 +9,4 @@ automation dnsupdate:
     shell_command.ddns_renew
     
 shell_command:
-  ddns_renew: !secrets ddns_renew
+  #ddns_renew: !secrets ddns_renew
