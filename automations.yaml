@@ -15,7 +15,7 @@
     # Optional
     from: 'home'
     # Optional
-    to: 'away'
+    to: 'not_home'
     # If given, will trigger when state has been the to state for X time.
   # for:
     # hours: 1
