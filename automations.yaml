@@ -5,6 +5,3 @@
     seconds: 30
   action:
     shell_command.ddns_renew
-    
-shell_command:
-  ddns_renew: !secret ddns_renew
