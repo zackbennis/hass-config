@@ -74,7 +74,7 @@ shell_command:
 # Device tracking
 device_tracker:
   - platform: nmap_tracker
-    hosts: 10.200.50.0/24
+    hosts: 10.200.50.51
 
 group: !include groups.yaml
 automation: !include automations.yaml
