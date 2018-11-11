@@ -1,4 +1,5 @@
 - id: ddns_update
+  alias: 'Update 1984.is A record'
   trigger:
     platform: time
     at: '00:00:00'
