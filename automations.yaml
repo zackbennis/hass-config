@@ -4,4 +4,4 @@
     #at: '00:00:00'
     seconds: 30
   action:
-    shell_command.ddns_renew
+    service: shell_command.ddns_renew
