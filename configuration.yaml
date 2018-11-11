@@ -70,6 +70,11 @@ cloud:
 # Shell Commands
 shell_command:
   ddns_renew: !secret ddns_renew
+  
+# Device tracking
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 10.200.50.0/24
 
 group: !include groups.yaml
 automation: !include automations.yaml
