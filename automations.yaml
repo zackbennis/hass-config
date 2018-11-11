@@ -6,3 +6,35 @@
     #seconds: '/5' #for testing every 5 seconds
   action:
     service: shell_command.ddns_renew
+    
+- id: zack_leaving
+  alias: "Zack - Leaving for work"
+  trigger:
+    platform: state
+    entity_id: device_tracker.paulus, device_tracker.anne_therese
+    # Optional
+    from: 'home'
+    # Optional
+    to: 'away'
+    # If given, will trigger when state has been the to state for X time.
+    for:
+      hours: 1
+      minutes: 10
+      seconds: 5
+  condition:
+    - condition: time
+      after: '15:00:00'
+      before: '23:00:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    service: notify.slack
+    data_template:
+      message: >
+        Brent is leaving work.
+        ETA: {{ states.sensor.brent_home_travel.attributes.duration_in_traffic }}
+      target: "@emmahughes"
