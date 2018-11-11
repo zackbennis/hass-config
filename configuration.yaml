@@ -62,6 +62,10 @@ tts:
 # Cloud
 cloud:
 
+# Shell Commands
+shell_command:
+  ddns_renew: !secret ddns_renew
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
