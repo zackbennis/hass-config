@@ -11,7 +11,7 @@
   alias: "Zack - Leaving for work"
   trigger:
     platform: state
-    entity_id: device_tracker.paulus, device_tracker.anne_therese
+    entity_id: device_tracker.zacks_pixel2xl
     # Optional
     from: 'home'
     # Optional
