@@ -23,16 +23,14 @@
     # seconds: 5
   condition:
     - condition: time
-      after: '00:00:00'
-      before: '23:30:00'
+      after: '07:30:00'
+      before: '08:30:00'
       weekday:
         - mon
         - tue
         - wed
         - thu
         - fri
-        - sat
-        - sun
   action:
     service: notify.slack
     data_template:
