@@ -13,10 +13,10 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-http:
-  base_url: https://benn.is:8123
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+#http:
+#  base_url: https://benn.is:8123
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
 
 # Show links to resources in log and frontend
 #introduction:
