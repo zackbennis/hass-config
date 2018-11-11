@@ -1,5 +1,3 @@
-secrets: !include secrets.yaml
-
 automation dnsupdate:
   trigger:
     platform: time
