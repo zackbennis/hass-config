@@ -23,7 +23,7 @@
     # seconds: 5
   condition:
     - condition: time
-      after: '07:30:00'
+      after: '07:15:00'
       before: '08:30:00'
       weekday:
         - mon
