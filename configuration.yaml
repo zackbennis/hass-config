@@ -13,7 +13,7 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-#http:
+http:
   #base_url: https://benn.is:8123
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
