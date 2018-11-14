@@ -14,9 +14,9 @@ homeassistant:
   customize: !include customize.yaml
 
 #http:
-#  base_url: https://benn.is:8123
-#  ssl_certificate: /ssl/fullchain.pem
-#  ssl_key: /ssl/privkey.pem
+  #base_url: https://benn.is:8123
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 # Show links to resources in log and frontend
 #introduction:
@@ -26,10 +26,6 @@ frontend:
 
 # Enables configuration UI
 config:
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
 
 # Checks for available updates
 # Note: This component will send some information about your system to
