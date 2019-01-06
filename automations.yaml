@@ -3,24 +3,16 @@
   trigger:
     platform: time
     at: '00:00:00'
-    #seconds: '/5' #for testing every 5 seconds
   action:
     service: shell_command.ddns_renew
-    
+
 - id: zack_leaving
   alias: "Zack - Leaving for work"
   trigger:
     platform: state
     entity_id: device_tracker.zacks_pixel2xl
-    # Optional
     from: 'home'
-    # Optional
     to: 'not_home'
-    # If given, will trigger when state has been the to state for X time.
-  # for:
-    # hours: 1
-    # minutes: 10
-    # seconds: 5
   condition:
     - condition: time
       after: '07:15:00'
@@ -37,3 +29,16 @@
       message: >
         Zack is heading to work.
       target: "#carpooling"
+
+- id: nest_alert
+  alias: "Nest Temperature Alert"
+  trigger:
+    platform: state
+    entity_id: device_tracker.zacks_pixel2xl
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.gmail_text
+    data:
+      title: 'Low temperature alert'
+      message: 'Low temperature at Nest location!!'
