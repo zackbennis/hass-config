@@ -57,6 +57,10 @@ sun:
 # Sensors
 sensor:
 
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+
 # Text to speech
 tts:
 
@@ -71,13 +75,27 @@ shell_command:
 device_tracker:
   - platform: nmap_tracker
     hosts: 10.200.50.51
-    
+    home_interval: 1
+
 # Notifications
 notify:
   - name: slack
     platform: slack
     api_key: !secret slack_api
     default_channel: '#carpool'
+
+  - name: gmail_text
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret gmail_user
+    encryption: starttls
+    username: !secret gmail_user
+    password: !secret gmail_pass
+    recipient:
+      - 5163195709@vtext.com
+    sender_name: Nest Alert
 
 group: !include groups.yaml
 automation: !include automations.yaml
